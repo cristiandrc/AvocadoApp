@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/NavBar";
 
 const Home = () => {
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("/api/avo");
+      const data = response.json;
+      console.log(data);
+    })();
+  });
+
   return (
     <div>
       <NavBar />
