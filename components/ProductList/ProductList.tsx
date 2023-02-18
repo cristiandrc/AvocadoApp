@@ -10,7 +10,7 @@ const mapProductsToCards = (products: TProduct[]) =>
   products.map(({ name, id, price, image }) => (
     <Link key={id} href="/product/[id]" as={`/product/${id}`} passHref>
       <Card
-        as="a"
+        // as="a" // genera error
         header={name}
         image={image}
         meta={<Card.Meta style={{ color: "dimgray" }}>{price}</Card.Meta>}
@@ -22,7 +22,7 @@ const ProductList = ({ products }: ProductListProps) => (
   <Card.Group
     itemsPerRow={2}
     stackable
-    style={{ justifyContent: "space-around" }}
+    style={{ justifyContent: "center", gap: "20px" }}
   >
     {mapProductsToCards(products)}
   </Card.Group>
