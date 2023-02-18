@@ -8,7 +8,8 @@
     "dev": "next",
     "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "keywords": [],
   "author": "Cristian Rojas <cristian.rojas.d@outlook.com>",
